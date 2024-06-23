@@ -1,17 +1,253 @@
 [
     {
-    "category" : "Beverages"
-},
-{
-    "category": "Indian"
-},
-{
-    "category": "Desserts"
-},
-{
-    "category": "Pizza"
-},
-{
-    "category": "Pasta"
-},
-]
+      "name": "Paneer Butter Masala",
+      "category": "Indian",
+      "description": "Cottage cheese cubes in a creamy tomato-based gravy.",
+      "options": {
+        "half": 180,
+        "full": 280
+      },
+      "imgUrl": "https://media.istockphoto.com/id/1463279736/photo/cheese-cottage-curry.jpg?s=2048x2048&w=is&k=20&c=EQ6BjCFqzFtrM7M1oobxq-NNd0wjo31A8uSa17h5WUM="
+    },
+    {
+      "name": "Margherita Pizza",
+      "category": "Pizza",
+      "description": "Classic pizza topped with tomato sauce, mozzarella cheese, and basil leaves.",
+      "options": {
+        "regular": 220,
+        "large": 320
+      },
+      "imgUrl": "https://media.istockphoto.com/id/1393150881/photo/italian-pizza-margherita-with-cheese-and-tomato-sauce-on-the-board-on-grey-table-macro-close.jpg?s=2048x2048&w=is&k=20&c=2Ukzz0QG9xNoFR0djb9_96vvzB69t95RhIHttfpDpik="
+    },
+    {
+      "name": "Penne Arrabbiata",
+      "category": "Pasta",
+      "description": "Penne pasta in spicy tomato sauce with garlic and herbs.",
+      "options": {
+        "small": 180,
+        "large": 280
+      },
+      "imgUrl": "https://media.istockphoto.com/id/1324563622/photo/close-up-of-a-frying-pan-with-penne-allarrabbiata-pasta-cooked-according-to-a-traditional.jpg?s=2048x2048&w=is&k=20&c=eq037WiOW-PZVv7yEoTmDV1Rxi-ccGyeWSt3q4Fu_Lc="
+    },
+    {
+      "name": "Gulab Jamun",
+      "category": "Desserts",
+      "description": "Deep-fried milk solids soaked in sugar syrup.",
+      "options": {
+        "single": 20,
+        "double": 35
+      },
+      "imgUrl": "https://media.istockphoto.com/id/521803129/photo/gulab-jamun-11.jpg?s=612x612&w=0&k=20&c=wyJaXY7Uu0hMBCXkcTDRaujSKN6Rp9roJeKDvF6CfHI="
+    },
+    {
+      "name": "Masala Chai",
+      "category": "Beverages",
+      "description": "Indian spiced tea brewed with milk and spices.",
+      "options": {
+        "regular": 30,
+        "large": 50
+      },
+      "imgUrl": "https://media.istockphoto.com/id/1336601313/photo/top-view-of-indian-herbal-masala-chai-or-traditional-beverage-tea-with-milk-and-spices-kerala.jpg?s=612x612&w=0&k=20&c=txjXqXtu3_PcA0ztNxyNVXJ-YziORr2XnuHWIriNEKk="
+    },
+    {
+      "name": "Chicken Biryani",
+      "category": "Indian",
+      "description": "Fragrant rice cooked with marinated chicken pieces and aromatic spices.",
+      "options": {
+        "regular": 200,
+        "large": 300
+      },
+      "imgUrl": "https://media.istockphoto.com/id/1345624336/photo/chicken-biriyani.jpg?s=2048x2048&w=is&k=20&c=uU0uuti6KOvpQhXuu6VMpgi021o1vZXfOhpMrJXSn1o="
+    },
+    {
+      "name": "Vegetable Supreme Pizza",
+      "category": "Pizza",
+      "description": "Pizza loaded with assorted vegetables, cheese, and tomato sauce.",
+      "options": {
+        "regular": 240,
+        "large": 360
+      },
+      "imgUrl": "https://media.istockphoto.com/id/1387856824/photo/hot-cheese-stringy-slice-lifted-of-full-baked-pizza-isolated-on-white-background.jpg?s=612x612&w=0&k=20&c=gllhgkN6ckp-V31zInzCRAhtdfpdksN_ae5tlk1sNA8="
+    },
+    {
+      "name": "Spaghetti Carbonara",
+      "category": "Pasta",
+      "description": "Spaghetti pasta tossed in a creamy egg and parmesan sauce with bacon.",
+      "options": {
+        "small": 200,
+        "large": 300
+      },
+      "imgUrl": "https://media.istockphoto.com/id/1065506718/photo/carbonara-pasta-spaghetti-with-pancetta-egg-parmesan-cheese-and-cream-sauce-traditional.jpg?s=612x612&w=0&k=20&c=nGdJRIL75P4SRCDBFbY2_TjZbf_dS5Rqo774c8rkcLc="
+    },
+    {
+      "name": "Rasgulla",
+      "category": "Desserts",
+      "description": "Soft, spongy balls of cottage cheese soaked in sugar syrup.",
+      "options": {
+        "single": 25,
+        "double": 40
+      },
+      "imgUrl": "https://media.istockphoto.com/id/1209656661/photo/famous-bengali-sweet-rasgulla-is-ready-to-serve.jpg?s=612x612&w=0&k=20&c=PwaWqMRvX66oYbdzXbmblF6CNe5vcOWXidhA0Tr-n2o="
+    },
+    {
+      "name": "Mango Lassi",
+      "category": "Beverages",
+      "description": "Refreshing yogurt-based drink blended with ripe mangoes.",
+      "options": {
+        "regular": 50,
+        "large": 80
+      },
+      "imgUrl": "https://media.istockphoto.com/id/1365859011/photo/drink-mango-lassi-in-two-glasses-on-rustic-concrete-table-with-fresh-ripe-cut-manfo-from-above.jpg?s=612x612&w=0&k=20&c=uHnr_0raQDe2sgUYHdP5GSa2raaj3ILG4m1cmFHtVJA="
+    },
+    {
+      "name": "Palak Paneer",
+      "category": "Indian",
+      "description": "Cottage cheese cubes in a creamy spinach gravy.",
+      "options": {
+        "half": 160,
+        "full": 260
+      },
+      "imgUrl": "https://media.istockphoto.com/id/1353777009/photo/indian-cottage-cheese-curry-with-spinach-directly-above-photo.jpg?s=612x612&w=0&k=20&c=FsDU0eoFopzWweb6Jqwao-7ji7lvUKxPL2gTMRUG2ic="
+    },
+    {
+      "name": "Pepperoni Pizza",
+      "category": "Pizza",
+      "description": "Pizza topped with spicy pepperoni slices, cheese, and tomato sauce.",
+      "options": {
+        "regular": 260,
+        "large": 380
+      },
+      "imgUrl": "https://media.istockphoto.com/id/153985988/photo/pepperoni-pizza-on-white.jpg?s=612x612&w=0&k=20&c=5cRpFXPO54Hkj9YbbE8_LL9ZXVT0_e0iTJZxSQHcpBQ="
+    },
+    {
+      "name": "Pesto Pasta",
+      "category": "Pasta",
+      "description": "Pasta coated in a basil pesto sauce with pine nuts and parmesan cheese.",
+      "options": {
+        "small": 220,
+        "large": 340
+      },
+      "imgUrl": "https://media.istockphoto.com/id/1394250895/photo/basil-pesto-pasta-with-parmesan-and-olive-oil.jpg?s=612x612&w=0&k=20&c=UjVC6QvG0UWTtSmBCeMKQH84lbPyJBF0d3Xyj1RO0rs="
+    },
+    {
+      "name": "Rasmalai",
+      "category": "Desserts",
+      "description": "Soft cottage cheese patties in thickened saffron-flavored milk.",
+      "options": {
+        "single": 30,
+        "double": 50
+      },
+      "imgUrl": "https://media.istockphoto.com/id/1410335824/photo/ras-malai-served-in-a-dish-isolated-on-dark-background-side-view-of-pakistani-sweet.jpg?s=612x612&w=0&k=20&c=kPLTD4YIfaZFyQ--T6SEd8nfZsE-eZh1a-UXgTc4OaQ="
+    },
+    {
+      "name": "Cold Coffee",
+      "category": "Beverages",
+      "description": "Chilled coffee blended with milk and sugar, served with ice cream.",
+      "options": {
+        "regular": 70,
+        "large": 100
+      },
+      "imgUrl": "https://media.istockphoto.com/id/617367366/photo/cold-chocolate-milkshake-frappe-in-tall-glass-with-ice.jpg?s=612x612&w=0&k=20&c=UaCdbgJstjHsrpu0d44f_msr7mFMfGweEDiIHZm_Mc4="
+    },
+    {
+      "name": "Samosa",
+      "category": "Indian",
+      "description": "Crispy pastry filled with spiced potatoes and peas.",
+      "options": {
+        "single": 15,
+        "double": 25
+      },
+      "imgUrl": "https://media.istockphoto.com/id/1299380316/photo/samosa-with-chutney-in-plate-asian-breakfast-aloo-samosa.jpg?s=612x612&w=0&k=20&c=5qZx0Iz-lyuETPv9SS1lVge2yw2gI3iAA4ArRp7yuu8="
+    },
+    {
+      "name": "BBQ Chicken Pizza",
+      "category": "Pizza",
+      "description": "Pizza topped with BBQ sauce, grilled chicken, onions, and cheese.",
+      "options": {
+        "regular": 280,
+        "large": 400
+      },
+      "imgUrl": "https://media.istockphoto.com/id/1287923339/photo/pizza-with-chicken-and-barbeque-sauce-italian-pizza-on-dark-grey-black-slate-background.jpg?s=612x612&w=0&k=20&c=Da19rXvQp-kSD0GKSWKBg21yFXt7JtKOo6OsS-TutHE="
+    },
+    {
+      "name": "Alfredo Pasta",
+      "category": "Pasta",
+      "description": "Fettuccine pasta in a creamy Alfredo sauce with garlic and parmesan.",
+      "options": {
+        "small": 240,
+        "large": 360
+      },
+      "imgUrl": "https://media.istockphoto.com/id/1451111530/photo/creamy-alfredo-pasta-with-chicken-mushrooms-and-parmesan-cheese-healthy-italian-food.jpg?s=612x612&w=0&k=20&c=MhHgRTw5-zoej97Hq__NbSfHFVtcvmsawZqpkky4Pwo="
+    },
+    {
+      "name": "Gajar Ka Halwa",
+      "category": "Desserts",
+      "description": "Indian carrot pudding made with grated carrots, milk, and sugar.",
+      "options": {
+        "single": 40,
+        "double": 60
+      },
+      "imgUrl": "https://media.istockphoto.com/id/1356499309/photo/gajar-ka-halwa-carrot-halwa-is-a-carrot-based-sweet-dessert-pudding-from-the-indian.jpg?s=612x612&w=0&k=20&c=zQ-QrEUFm_HhmXgfHBfJj_hSThM6lf3Gu6mmPs_CUFQ="
+    },
+    {
+      "name": "Lemonade",
+      "category": "Beverages",
+      "description": "Sweet and tangy lemon-flavored drink served chilled.",
+      "options": {
+        "regular": 40,
+        "large": 60
+      },
+      "imgUrl": "https://media.istockphoto.com/id/1324878857/photo/fresh-homemade-lemonade-with-lemon-and-mint.jpg?s=612x612&w=0&k=20&c=zEwDT1UoDbd_s_rAvAMJCCaR535VJAE2yGXkmR52u88="
+    },
+    {
+      "name": "Chole Bhature",
+      "category": "Indian",
+      "description": "Spicy chickpea curry with deep-fried bread.",
+      "options": {
+        "plate": 120,
+        "jumbo": 180
+      },
+      "imgUrl": "https://media.istockphoto.com/id/873539518/photo/deep-fried-bread-spicy-chickpeas-curry-and-salad.jpg?s=612x612&w=0&k=20&c=S3YF4G2hCVQCccnjC0Q_Q4RXmR2vQmzDOcvdVwOjgLU="
+    },
+    {
+      "name": "Cheese Burst Pizza",
+      "category": "Pizza",
+      "description": "Pizza with a molten cheese-filled crust, topped with tomato sauce and cheese.",
+      "options": {
+        "regular": 300,
+        "large": 420
+      },
+      "imgUrl": "https://media.istockphoto.com/id/1703810976/photo/pizza-with-chicken-fillet-bacon-sausages-chili-pepper-onion-and-greens.jpg?s=612x612&w=0&k=20&c=oEBdTWA5SUWi2FaqhbtdunMQ40tYpa2B7O5pnQrIjFM="
+    },
+    {
+      "name": "Lasagna",
+      "category": "Pasta",
+      "description": "Layered pasta with meat sauce, ricotta cheese, and mozzarella, baked to perfection.",
+      "options": {
+        "small": 260,
+        "large": 380
+      },
+      "imgUrl": "https://media.istockphoto.com/id/1477739651/photo/portion-of-lasagna-in-baking-dish-top-view.jpg?s=612x612&w=0&k=20&c=q3NU_5dcP95OManS6khkLZdhk9XzfCBw-UkmQSn5IRI="
+    },
+    {
+      "name": "Rabri",
+      "category": "Desserts",
+      "description": "Sweetened condensed milk cooked to a thick consistency, flavored with cardamom.",
+      "options": {
+        "single": 50,
+        "double": 80
+      },
+      "imgUrl": "https://media.istockphoto.com/id/854051742/photo/ghewar-sweet-food.jpg?s=612x612&w=0&k=20&c=BuzIx5iZqXAXmtDIa7iC8bX1O5xfvlXAmhwaKrYzDvo="
+    },
+    {
+      "name": "Filter Coffee",
+      "category": "Beverages",
+      "description": "South Indian style coffee brewed with ground coffee beans and milk.",
+      "options": {
+        "regular": 60,
+        "large": 90
+      },
+      "imgUrl": "https://media.istockphoto.com/id/1426307970/photo/south-indian-filter-coffee-served-in-a-traditional-tumbler-or-cup-over-roasted-raw-beans.jpg?s=612x612&w=0&k=20&c=6Cz2PxgEy-J9wvd9m0rCx0DN7AkCqul8yQh0EH9-tU8="
+    }
+  ]
+  
