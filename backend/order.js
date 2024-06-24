@@ -42,10 +42,20 @@ const getOrdersByTable = async (tableNumber) => {
   const orders = await Order.find({ tableNumber }).sort({ createdAt: -1 });
   return orders;
 };
+const getOrdersByUserId = async (UserId) => {
+  const orders = await Order.find({ UserId }).sort({ createdAt: -1 });
+  return orders;
+};
+const getCartByUserId = async (UserId) => {
+  const cart = await Order.findOne({ UserId, status: "active" });
+  return cart;
+};
 
 module.exports = {
   saveOrder,
   completeOrder,
   getOrder,
   getOrdersByTable,
+  getOrdersByUserId,
+  getCartByUserId,
 };
