@@ -1,3 +1,18 @@
+<<<<<<< HEAD
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body{
+  margin: 0;
+  padding: 0;
+}
+ 
+*{
+  box-sizing: border-box;
+  transition: all 0.1s ease-in-out;
+}
+=======
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -66,3 +81,4 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+>>>>>>> ccafe8145d3e86acd848b29da034d9ec06fe5850
