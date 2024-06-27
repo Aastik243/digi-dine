@@ -1,7 +1,9 @@
 import React, { useReducer, useContext, createContext } from 'react';
+import { useState } from 'react';
 
 const CartStateContext = createContext();
 const CartDispatchContext = createContext();
+const UserContext = createContext();
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -13,17 +15,9 @@ const reducer = (state, action) => {
             return newArr;
         case "DROP":
             let empArray = []
-            return empArray
-        case "UPDATE":
-            let arr = [...state]
-            arr.find((food, index) => {
-                if (food.id === action.id) {
-                    console.log(food.qty, parseInt(action.qty), action.price + food.price)
-                    arr[index] = { ...food, qty: parseInt(action.qty) + food.qty, price: action.price + food.price }
-                }
-                return arr
-            })
-            return arr
+            return empArray;
+       
+            
         default:
             console.log("Error in Reducer");
     }
@@ -41,5 +35,24 @@ export const CartProvider = ({ children }) => {
     )
 };
 
+export const UserProvider = ({ children }) => {
+    const [userEmail, setUserEmail] = useState(null);
+  
+    const login = (email) => {
+      setUserEmail(email);
+    };
+  
+    const logout = () => {
+      setUserEmail(null);
+    };
+  
+    return (
+      <UserContext.Provider value={{ userEmail, login, logout }}>
+        {children}
+      </UserContext.Provider>
+    );
+  };
+
+export const useUser = () => useContext(UserContext);
 export const useCart = () => useContext(CartStateContext);
 export const useDispatchCart = () => useContext(CartDispatchContext);

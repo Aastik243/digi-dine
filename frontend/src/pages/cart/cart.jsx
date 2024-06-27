@@ -1,12 +1,40 @@
 import React from 'react';
-import { useCart, useDispatchCart } from '../../components/ContextReducer/ContextReducer';
+import { useCart, useDispatchCart, useUser } from '../../components/ContextReducer/ContextReducer';
 
 const Cart = () => {
+    const { userEmail, login, logout } = useUser();
   const cart = useCart();
   const dispatch = useDispatchCart();
 
   const handleRemove = (index) => {
     dispatch({ type: 'REMOVE', index });
+  };
+
+  const handleCheckout = async () => {
+    try {
+      const response = await fetch('http://localhost:5000/api/orderData', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          
+        },
+        body: JSON.stringify({
+          orderDetails: cart,
+          email : userEmail,
+          order_date: new Date().toString()
+        })
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        console.log('Order placed successfully', data);
+        dispatch({ type: 'DROP' }); 
+      } else {
+        console.error('Failed to place order');
+      }
+    } catch (error) {
+      console.error('Error during checkout:', error);
+    }
   };
 
   const totalPrice = cart.reduce((total, item) => total + item.price, 0);
@@ -51,7 +79,7 @@ const Cart = () => {
       <div className="mt-4 text-right">
         <h3 className="text-xl font-bold">Total: ₹{totalPrice.toFixed(2)}</h3>
       </div>
-      <button className="btn btn-success btn-xs sm:btn-sm md:btn-md lg:btn-lg text-center">Checkout</button>
+      <button className="btn btn-success btn-xs sm:btn-sm md:btn-md lg:btn-lg text-center" onClick={handleCheckout}>Checkout</button>
     </div>
   
   );

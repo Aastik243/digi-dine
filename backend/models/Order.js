@@ -5,24 +5,20 @@ const orderSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
+  email: {
+    type: String,
+    required: true,
+  },
   orderDetails: {
     type: Array,
     required: true,
     default: [],
   },
-  status: {
+  date : {
     type: String,
-    required: true,
-    enum: ["active", "completed"],
-    default: "active",
-  },
-  createdAt: {
-    type: Date,
-    default: Date.now,
-  },
-  completedAt: {
-    type: Date,
-  },
+    required:true,
+  }
+
 });
 
 const Order = mongoose.model("Order", orderSchema);

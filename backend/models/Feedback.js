@@ -5,10 +5,6 @@ const feedbackSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  tableNumber: {
-    type: Number,
-    required: true,
-  },
   feedbackText: {
     type: String,
     required: true,
@@ -19,11 +15,7 @@ const feedbackSchema = new mongoose.Schema({
     max: 5,
     required: true,
   },
-  createdAt: {
-    type: Date,
-    default: Date.now,
-  },
-});
+},  {timestamps:true});
 
 const Feedback = mongoose.model("Feedback", feedbackSchema);
 

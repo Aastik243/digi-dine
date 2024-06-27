@@ -2,10 +2,14 @@ import express from "express";
 import authRoutes from "./routes/auth.routes.js";
 import bodyParser from "body-parser";
 import dotenv from "dotenv";
-import { saveOrder, completeOrder, getOrder } from "./controllers/order.js";
+import Feedback from "./models/Feedback.js";
+import Order from "./models/Order.js";
+// import { saveOrder, completeOrder, getOrder } from "./controllers/order.js";
 import { saveFeedback, getFeedback } from "./controllers/feedback.js";
 import connectMongoDB from "./db/connectMongoDB.js";
 import cors from "cors";
+import { protectRoute } from "./middleware/protectRoute.js";
+import cookieParser from "cookie-parser";
 
 dotenv.config();
 
@@ -15,6 +19,49 @@ app.use(express.json());
 app.use(express.urlencoded({ extended : true}));
 app.use(bodyParser.json());
 app.use(cors());
+app.use(cookieParser());
+
+app.post("/api/orderData", async (req, res) => {
+    const { orderDetails, email, order_date } = req.body; 
+    const tableNumber = Math.floor(Math.random() * 20) + 1; // Random table number between 1 and 20
+
+    try {
+        const newOrder = new Order({
+            tableNumber,
+            email, 
+            orderDetails, 
+            date:order_date,
+        });
+
+        const savedOrder = await newOrder.save();
+        res.status(201).json(savedOrder);
+    } catch (error) {
+        console.error('Error placing order:', error);
+        res.status(500).json({ message: 'Failed to place order', error });
+    }
+});
+
+app.post("/myOrderData", async(req,res)=>{
+    let myData= await Order.findOne({'email':req.body.email});
+    res.json({orderData1:myData});
+})
+
+app.post("/api/feedback", async(req,res) => {
+    const { customerName, feedbackText, rating } = req.body;
+  const newFeedback = new Feedback({
+    customerName,
+    feedbackText,
+    rating,
+  });
+
+
+  try {
+    const savedFeedback = await newFeedback.save();
+    res.status(201).json(savedFeedback);
+  } catch (err) {
+    res.status(500).json({ error: 'Failed to save feedback' });
+  }
+});
 
 app.post("/foodData", async (req,res) => {
 try{
@@ -52,17 +99,7 @@ app.post("/api/order", async (req, res) => {
     }
   });
   
-  app.get("/api/order/:tableNumber", async (req, res) => {
-    const { tableNumber } = req.params;
   
-    try {
-      const order = await getOrder(tableNumber);
-      res.status(200).json(order);
-    } catch (error) {
-      console.error("Error fetching order:", error);
-      res.status(500).json({ error: "Failed to fetch order" });
-    }
-  });
   app.get("/api/orders/:tableNumber", async (req, res) => {
     const { tableNumber } = req.params;
   
