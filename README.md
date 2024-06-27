@@ -9,14 +9,14 @@ Checkout Functionality: Seamless checkout process.
 Table Number Assignment: Orders are automatically assigned a table number between 1 and 20.
 Order History: Users can view their order history, including details like order date, items ordered, and total cost.
 Feedback Form: Integrated feedback form for users to submit their comments and suggestions.
-##Technologies Used
+## Technologies Used
 React.js
 Node.js
 Express.js
 MongoDB
 Tailwind CSS
 JWT Authentication
-##Installation
+## Installation
 Clone the repository.
 Install dependencies using npm install.
 Set up environment variables.
