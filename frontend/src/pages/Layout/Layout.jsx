@@ -1,17 +1,16 @@
 import { Outlet } from "react-router-dom";
 import styles from './Layout.module.css';
 import Header from "../../components/Header/Header";
+import Navbar from "../navbar/navbar";
 
 const Home = () => {
   return (
-    <div className={styles.background}>
-      <Header />
-      <div className={styles.mainContent}>
-        <div className={styles.contentWrapper}>
+    <>
+     <Navbar />
+      
           <Outlet />
-        </div>
-      </div>
-    </div>
+          </>
+       
   );
 };
 

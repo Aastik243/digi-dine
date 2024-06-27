@@ -1,55 +1,62 @@
 // src/components/Navbar.jsx
 import React from 'react';
+import img from "/images/logochef.png"
 
 const Navbar = () => {
   return (
-    <nav className="bg-white shadow-lg">
-      <div className="max-w-6xl mx-auto px-4">
-        <div className="flex justify-between">
-          <div className="flex space-x-4">
-            {/* Logo */}
-            <div>
-              <a href="#" className="flex items-center py-5 px-2 text-gray-700 hover:text-gray-900">
-                <img src="/path-to-your-logo.png" alt="Logo" className="h-8 w-8 mr-2" />
-                <span className="font-bold text-xl">FoodApp</span>
-              </a>
-            </div>
-
-            {/* Primary Navigation */}
-            <div className="hidden md:flex items-center space-x-1">
-              <a href="#" className="py-5 px-3 text-gray-700 hover:text-gray-900">Home</a>
-              <a href="#" className="py-5 px-3 text-gray-700 hover:text-gray-900">Menu</a>
-              <a href="#" className="py-5 px-3 text-gray-700 hover:text-gray-900">About</a>
-              <a href="#" className="py-5 px-3 text-gray-700 hover:text-gray-900">Contact</a>
-            </div>
-          </div>
-
-          {/* Secondary Navigation */}
-          <div className="hidden md:flex items-center space-x-1">
-            <a href="#" className="py-5 px-3 text-gray-700 hover:text-gray-900">Sign In</a>
-            <a href="#" className="py-2 px-3 bg-yellow-400 text-yellow-900 rounded hover:bg-yellow-300 transition duration-300">Cart</a>
-          </div>
-
-          {/* Mobile Button */}
-          <div className="md:hidden flex items-center">
-            <button className="mobile-menu-button">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-              </svg>
-            </button>
-          </div>
+    <div className="navbar bg-base-100">
+    <div className="navbar-start">
+      <div className="dropdown">
+        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="h-5 w-5"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h8m-8 6h16" />
+          </svg>
         </div>
+        <ul
+          tabIndex={0}
+          className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+          <li><a>Item 1</a></li>
+          <li>
+            <a>Parent</a>
+            <ul className="p-2">
+              <li><a>Submenu 1</a></li>
+              <li><a>Submenu 2</a></li>
+            </ul>
+          </li>
+          <li><a>Item 3</a></li>
+        </ul>
       </div>
-
-      {/* Mobile Menu */}
-      <div className="mobile-menu hidden md:hidden">
-        <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">Home</a>
-        <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">Menu</a>
-        <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">About</a>
-        <a href="#" className="block py-2 px-4 text-sm hover:bg-gray-200">Contact</a>
-      </div>
-    </nav>
-  );
+      <a className="btn btn-ghost text-xl">daisyUI</a>
+    </div>
+    <div className="navbar-center hidden lg:flex">
+      <ul className="menu menu-horizontal px-1">
+        <li><a>Item 1</a></li>
+        <li>
+          <details>
+            <summary>Parent</summary>
+            <ul className="p-2">
+              <li><a>Submenu 1</a></li>
+              <li><a>Submenu 2</a></li>
+            </ul>
+          </details>
+        </li>
+        <li><a>Item 3</a></li>
+      </ul>
+    </div>
+    <div className="navbar-end">
+      <a className="btn">Button</a>
+    </div>
+  </div>
+  )
 };
 
 export default Navbar;

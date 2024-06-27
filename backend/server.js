@@ -5,6 +5,7 @@ import dotenv from "dotenv";
 import { saveOrder, completeOrder, getOrder } from "./controllers/order.js";
 import { saveFeedback, getFeedback } from "./controllers/feedback.js";
 import connectMongoDB from "./db/connectMongoDB.js";
+import cors from "cors";
 
 dotenv.config();
 
@@ -13,8 +14,19 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended : true}));
 app.use(bodyParser.json());
+app.use(cors());
 
+app.post("/foodData", async (req,res) => {
+try{
+    res.send(global.foodItems);
 
+}
+catch(error){
+    console.log(error);
+    res.send("Server error");
+
+}
+})
 
 app.post("/api/order", async (req, res) => {
     const { tableNumber, orderDetails } = req.body;
@@ -98,6 +110,10 @@ app.get("/", (req,res) => {
 })
 
 app.use("/api/auth", authRoutes);
+
+app.get("/test",  async (req,res) =>{
+    
+})
 
 app.listen(5000, ()=>{
     console.log("Server is running on port 5000");

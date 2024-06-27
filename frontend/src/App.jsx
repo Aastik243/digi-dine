@@ -3,7 +3,6 @@ import User from './pages/User/User';
 import Admin from './pages/Admin/Admin';
 import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
 import NotFound from './components/NotFound';
-import RestaurentMenu from './pages/User/RestaurentMenu';
 import Login from './pages/login/login';
 import Signup from './pages/login/signup';
 
@@ -14,7 +13,6 @@ const router = createBrowserRouter(
         <Route path="/user" element={<User />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/user/:restaurentId" element={<RestaurentMenu />} />
         <Route path="/admin" element={<Admin />} />
       </Route>
       <Route path="*" element={<NotFound />} />

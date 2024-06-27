@@ -1,25 +1,33 @@
 import styles from './MenuItem.module.css'
 
-const MenuItem = ({item = {
-    title: "Pizza",
-    desc: "Very Delicious, Very Tasty",
-    isAvailable: true,
-    price: 249,
-    img: '/images/defaultFoodIcon.jpeg'
-}}) => {
+const MenuItem = (props) => {
+  let options=props.foodOptions;
+  let priceOptions=Object.keys(options);
+
   return (
-    <div className={`${styles.card}`}>
-        <div className={`${styles.left}`} style={{background: `url(${item.img}) no-repeat center center/cover`}}></div>
-        <div className={`${styles.right}`}>
-            <div className={`${styles.title}`}>{item.title}</div>
-            <div className={`${styles.desc}`}>{item.desc}</div>
-            <div className={`${styles.price}`}><span className='text-[#ffffff61]'>Price:</span> ₹{item.price} /-</div>
-            <div className={`${styles.buttons}`}>
-                <button className={`${styles.remove}`}><img src="/icons/remove.png" alt="-" /></button>
-                <button className={`${styles.add}`}><img src="/icons/add.png" alt="+" /></button>
-            </div>
-        </div>
+
+    <div className="card lg:card-side bg-base-100 shadow-xl">
+  <figure>
+    <img
+      src={props.foodImg}
+      alt="Album"
+      className="w-25 h-25 " />
+  </figure>
+  <div className="card-body">
+    <h2 className="card-title">{props.foodName}</h2>
+    <p>{props.foodDescription}</p>
+    <select className="select select-bordered w-max max-w-xs">
+    {priceOptions.map((type) =>{
+      return (<option key={type} value={type}>{type}</option>)
+    })}
+</select>
+
+    <div className="card-actions justify-end">
+      <button className="btn btn-primary">Add to Cart</button>
     </div>
+  </div>
+</div>
+    
   )
 }
 

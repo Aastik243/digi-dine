@@ -15,6 +15,10 @@ function Signup() {
             <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
                 <h2 className="text-2xl font-bold mb-6 text-center">Sign Up</h2>
                 <form onSubmit={handleSignup}>
+                <div className="mb-4">
+                        <label className="block text-gray-700">Username</label>
+                        <input type="text" className="w-full px-3 py-2 border rounded-lg" placeholder="UserName" />
+                    </div>
                     <div className="mb-4">
                         <label className="block text-gray-700">Name</label>
                         <input type="text" className="w-full px-3 py-2 border rounded-lg" placeholder="Name" />
