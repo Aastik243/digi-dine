@@ -45,11 +45,7 @@ const User = () => {
         {foodItems.length > 0 ? (
           foodItems.filter((filtereditem)=>filtereditem.name.toLowerCase().includes(search.toLocaleLowerCase()))
           .map((item) => (
-            <MenuItem foodName={item.name}
-            foodCategory={item.category}
-            foodImg={item.imgUrl} 
-            foodDescription={item.description}
-            foodOptions={item.options}
+            <MenuItem foodItem={item}
             />
           ))
         ) : (

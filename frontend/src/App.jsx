@@ -5,6 +5,7 @@ import { Route, RouterProvider, createBrowserRouter, createRoutesFromElements } 
 import NotFound from './components/NotFound';
 import Login from './pages/login/login';
 import Signup from './pages/login/signup';
+import { CartProvider } from './components/ContextReducer/ContextReducer';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -21,7 +22,12 @@ const router = createBrowserRouter(
 );
 
 const App = () => {
-  return <RouterProvider router={router} />;
+  return(
+    <>    <CartProvider>
+     <RouterProvider router={router} />
+     </CartProvider>
+     </>
+  )
 }
 
 export default App;
